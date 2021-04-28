@@ -6,6 +6,8 @@
 + Search any ticket using their ticket ID
 + Local storage to retain created tickets
 
+## Checkout app here [click me](https://ticket-mgmnt.netlify.app/)
+
 ## Todo
 
 - [x] Add delete function for tickets
