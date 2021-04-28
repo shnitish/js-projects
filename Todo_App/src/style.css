@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); * {
+    --primary-color: #444444;
+    --secondary-color: #FD852E;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+body {
+    background-color: #333333;
+}
+
+.main-div {
+    display: flex;
+    width: 750px;
+    margin: auto;
+    background-color: #454545;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: 1rem;
+}
+
+.todo-input {
+    min-width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: large;
+    font-weight: bold;
+    opacity: 0.8;
+    cursor: text;
+}
+
+.todo-input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+    opacity: 1;
+  }
+
+.button {
+    min-width: 15%;
+}
+
+.add-todo {
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    outline: none;
+    color: white;
+    opacity: 0.8;
+    transition: transform 0.7s;
+    cursor: pointer;
+}
+
+.add-todo:hover{
+    transform: rotate(360deg);
+}
+
+.add-todo:hover{
+    opacity: 1;
+}
+
+.todo-container {
+    width: 750px;
+    margin: auto;
+}
+
+.todos-list {
+    /* width: 750px; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.todo-item {
+    height: 9vh;
+    align-items: center;
+    background-color: #454545;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.todo {
+    min-height: 80%;
+    width: 80%;
+    color: white;
+    font-size: 1rem;
+    word-break: break-word;
+    padding: 0.2rem;
+}
+
+.delete-todo {
+    background: #D94B4A;
+    color: white;
+    width: 9%;
+    height: 85%;
+    outline: none;
+    border: none;
+    opacity: 0.8;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.delete-todo:hover{
+    opacity: 1;
+    transform: translate(8px, 5px);
+}
