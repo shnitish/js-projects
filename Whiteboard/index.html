@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="tools-content">
+        <div class="tools">
+            <div class="tool" id="pencil">
+                <img src="src/Icons/Black_Pencil.svg" title="Pencil" alt="">
+                <div class="tool-options hide">
+                    <div class="pencil-size">
+                        <input type="range" name="
+                        " id="" value="1" min="1" max="40">
+                    </div>
+                    <div class="pencil-colors">
+                        <div class="red"></div>
+                        <div class="yellow"></div>
+                        <div class="blue"></div>
+                        <div class="black"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tool" id="eraser">
+                <img src="src/Icons/Eraser.svg" alt="" title="Eraser">
+                <div class="tool-options hide">
+                    <div class="eraser-size">
+                        <input type="range" name="
+                        " id="" value="1" min="1" max="40">
+                    </div>
+                </div>
+            </div>
+            <div class="tool" id="undo"><img src="src/Icons/Undo.svg" alt="" title="Undo"></div>
+            <div class="tool" id="redo"><img src="src/Icons/Redo.svg" alt="" title="Redo"></div>
+            <div class="tool" id="sticky"><img src="src/Icons/StickyNote.svg" alt="" title="Sticky Note"></div>
+            <div class="tool" id="photo"><img src="src/Icons/Photo.svg" alt="" title="Import picture"></div>
+            <div class="tool" id="download"><img src="src/Icons/Download.svg" alt="" title="Download"></div>
+        </div>
+    </div>
+    <div class="canvas-content">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="src/script.js"></script>    
+    <script src="src/tools.js"></script>
+    <script src="src/undoRedo.js"></script>
+    <script src="src/sticky.js"></script>
+</body>
+</html>
