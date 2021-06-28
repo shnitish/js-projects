@@ -51,8 +51,9 @@ canvas.addEventListener("mousemove", function(e){
 
     if(isMouseDown)
     {
+        document.querySelector("#undo").style.opacity = 1;
         let x = e.clientX;
-        let y = e.clientY - canvasTop;
+        let y = e.clientY - (canvasTop + 5);
         ctx.lineTo(x, y);
         ctx.stroke();
 
