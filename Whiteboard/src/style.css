@@ -1,168 +1,189 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 .tools-content {
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .tools {
-    background: aliceblue;
-    height: 80%;
-    width: 70%;
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 10px;
-    align-items: center;
+	background: aliceblue;
+	height: 80%;
+	width: 70%;
+	display: flex;
+	justify-content: space-evenly;
+	border-radius: 10px;
+	align-items: center;
 }
 
 .tool {
-    height: 70%;
-    width: 10%;
-    position: relative;
+	height: 70%;
+	width: 10%;
+	position: relative;
 }
 
 .tool img {
-    height: 100%;
-    width: 100%;
-    transition: transform 0.5s;
+	height: 100%;
+	width: 100%;
+	transition: transform 0.5s;
 }
 
 .tool img:hover {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .canvas-content {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 #canvas {
-
 }
 
 .tool-options {
-    height: 100px;
-    width: 110px;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    position: absolute;
-    top: 45px;
-    left: -30px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    background: aliceblue;
+	height: 100px;
+	width: 110px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	position: absolute;
+	top: 45px;
+	left: -10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background: aliceblue;
 }
 
 .pencil-size {
-    text-align: center;
+	text-align: center;
 }
 .eraser-size {
-    text-align: center;
+	text-align: center;
 }
 
 .pencil-size input {
-    width: 90%;
+	width: 90%;
 }
 
 .eraser-size input {
-    width: 90%;
+	width: 90%;
 }
 
 .pencil-colors {
-    display: flex;
-    justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
-.pencil-colors>div {
-    height: 20px;
-    width: 20px;
-    border-radius: 50px;
+.pencil-colors > div {
+	height: 20px;
+	width: 20px;
+	border-radius: 50px;
 }
 
 .red {
-    background: red;
+	background: red;
 }
 
 .yellow {
-    background: yellow;
+	background: yellow;
 }
 
 .blue {
-    background: blue;
+	background: blue;
 }
 
 .black {
-    background: black;
+	background: black;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .sticky {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 155px;
-    width: 220px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 155px;
+	width: 220px;
 }
 
 .sticky-header {
-    height: 15%;
-    background: #B5D626;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+	height: 15%;
+	background: #b5d626;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
 }
 
 .sticky-header div {
-    height: 80%;
-    width: 12%;
+	height: 80%;
+	width: 12%;
 }
 
 .minimize {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .sticky-content {
-    height: 85%;
+	height: 85%;
 }
 
 textarea {
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding: 1rem;
-    background: #DADF84;
-    font-size: 1rem;
-    resize: none;
-    box-shadow: 0 10px 6px -6px #777;
+	height: 100%;
+	width: 100%;
+	outline: none;
+	border: none;
+	padding: 1rem;
+	background: #dadf84;
+	font-size: 1rem;
+	resize: none;
+	box-shadow: 0 10px 6px -6px #777;
 }
 
-textarea::-webkit-scrollbar 
-{
-    width: 5px;
-    background-color: #DADF84;
- }
-  
-textarea::-webkit-scrollbar-thumb 
-{
-    border-radius: 15px;
-    background-color: #2E3440; 
+textarea::-webkit-scrollbar {
+	width: 5px;
+	background-color: #dadf84;
 }
- 
+
+textarea::-webkit-scrollbar-thumb {
+	border-radius: 15px;
+	background-color: #2e3440;
+}
+
+.erase-all {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: transform 0.5s;
+}
+
+.erase-all:hover {
+	transform: scale(1.2);
+}
+
+.erase-all .fas {
+	color: red;
+	font-size: 1.5rem;
+}
+
+.image-upload {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}

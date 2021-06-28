@@ -33,12 +33,14 @@
                         <input type="range" name="
                         " id="" value="1" min="1" max="40">
                     </div>
+                    <div class="erase-all"><i class="fas fa-trash-alt"></i></div>
                 </div>
             </div>
             <div class="tool" id="undo"><img src="src/Icons/Undo.svg" alt="" title="Undo"></div>
             <div class="tool" id="redo"><img src="src/Icons/Redo.svg" alt="" title="Redo"></div>
             <div class="tool" id="sticky"><img src="src/Icons/StickyNote.svg" alt="" title="Sticky Note"></div>
-            <div class="tool" id="photo"><img src="src/Icons/Photo.svg" alt="" title="Import picture"></div>
+            <div class="tool" id="photo"><img src="src/Icons/Photo.svg" alt="" title="Import picture">
+            <input type="file" id="photo-upload" class="hide"></div>
             <div class="tool" id="download"><img src="src/Icons/Download.svg" alt="" title="Download"></div>
         </div>
     </div>
@@ -49,5 +51,6 @@
     <script src="src/tools.js"></script>
     <script src="src/undoRedo.js"></script>
     <script src="src/sticky.js"></script>
+    <script src="src/image.js"></script>
 </body>
 </html>

@@ -4,6 +4,17 @@ let redo = document.querySelector("#redo");
 undo.addEventListener("click", undoLine);
 redo.addEventListener("click", redoLine);
 
+// make undo btn disabled when no data
+if(db.length == 0)
+{
+    document.querySelector("#undo").style.opacity = 0.2;
+}
+
+// make redo btn disabled when no data
+if(redoDB.length == 0)
+{
+    document.querySelector("#redo").style.opacity = 0.2;
+}
 
 function undoLine()
 {
@@ -11,6 +22,11 @@ function undoLine()
     let redoLine = db.pop();
     redoDB.push(redoLine);
 
+    // make undo btn disabled when no data
+    if(db.length == 0)
+    {
+        document.querySelector("#undo").style.opacity = 0.2;
+    }
     //2. clear the canvas
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
@@ -72,5 +88,9 @@ function redoLine()
             }
         }
         db.push(line);
+        if(db.length > 0)
+        {
+            undo.style.opacity = 1;
+        }  
     }
 }

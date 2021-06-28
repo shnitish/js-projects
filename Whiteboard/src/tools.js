@@ -5,6 +5,8 @@ let pencilOptions = pencil.querySelector(".tool-options");
 let eraserOptions = eraser.querySelector(".tool-options");
 let pencilSizeInput = pencil.querySelector("input");
 let eraserSizeInput = eraser.querySelector("input");
+let eraseAllBtn = eraser.querySelector(".erase-all");
+let downloadBtn = document.querySelector("#download");
 
 let activeTool = "pencil";
 let currentPencilSize = 1;
@@ -31,6 +33,16 @@ eraserSizeInput.addEventListener("change", function()
     let eraserSizeInputVal = eraserSizeInput.value;
     ctx.lineWidth = eraserSizeInputVal;
     currentEraserSize = eraserSizeInputVal;
+});
+
+eraseAllBtn.addEventListener("click", function()
+{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    db = [];
+    line = [];
+    redoDB = [];
+    document.querySelector("#undo").style.opacity = 0.2;
+    document.querySelector("#redo").style.opacity = 0.2;
 });
 
 pencil.addEventListener("click", function()
@@ -80,3 +92,12 @@ eraser.addEventListener("click", function()
         pencilOptions.classList.add("hide");
     }
 })
+
+downloadBtn.addEventListener("click", function()
+{
+    let canvasUrl = canvas.toDataURL({type: "image/png"});
+    let aTag = document.createElement("a");
+    aTag.href = canvasUrl;
+    aTag.download = "canvas.png";
+    aTag.click();
+});

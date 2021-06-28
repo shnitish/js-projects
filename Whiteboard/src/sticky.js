@@ -1,20 +1,37 @@
 let stickyBtn = document.querySelector("#sticky");
 
-stickyBtn.addEventListener("click", appendSticky);
+stickyBtn.addEventListener("click", function(e)
+{
+    appendSticky(e, null);
+});
 
 // append sticky note to body on click
-function appendSticky()
+function appendSticky(e, element)
 {
     let sticky = document.createElement("div");
     sticky.classList.add("sticky");
-    sticky.innerHTML = 
-    `<div class="sticky-header">
-    <div class="minimize"><i class="far fa-window-minimize"></i></div>
-    <div class="close"><i class="fas fa-times-circle"></i></div>
-    </div>
-    <div class="sticky-content">
-    <textarea cols="30" rows="10"></textarea>
-    </div>`;
+    if(element)
+    {
+        sticky.innerHTML = 
+        `<div class="sticky-header">
+        <div class="minimize"><i class="far fa-window-minimize"></i></div>
+        <div class="close"><i class="fas fa-times-circle"></i></div>
+        </div>
+        <div class="sticky-content">
+        </div>`;
+        sticky.querySelector(".sticky-content").append(element);
+    }
+    else
+    {
+        sticky.innerHTML = 
+        `<div class="sticky-header">
+        <div class="minimize"><i class="far fa-window-minimize"></i></div>
+        <div class="close"><i class="fas fa-times-circle"></i></div>
+        </div>
+        <div class="sticky-content">
+        <textarea cols="30" rows="10"></textarea>
+        </div>`;
+    }
 
     let stickyHeader = sticky.querySelector(".sticky-header");
     let isStickyHold = false;

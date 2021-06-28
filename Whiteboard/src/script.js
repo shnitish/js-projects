@@ -28,6 +28,7 @@ canvas.addEventListener("mousedown", function(e)
         redoBtn.style.opacity = 0.2;
     }
 
+    document.querySelector("#undo").style.opacity = 1;
     isMouseDown = true;
     let x = e.clientX;
     let y = e.clientY - (canvasTop + 5);
