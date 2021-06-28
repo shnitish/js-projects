@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -42,6 +42,7 @@
 }
 
 #canvas {
+
 }
 
 .tool-options {
@@ -51,7 +52,7 @@
     border-radius: 10px;
     position: absolute;
     top: 45px;
-    left: -10px;
+    left: -30px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -61,7 +62,6 @@
 .pencil-size {
     text-align: center;
 }
-
 .eraser-size {
     text-align: center;
 }
@@ -72,23 +72,6 @@
 
 .eraser-size input {
     width: 90%;
-}
-
-.erase-all {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-.erase-all:hover {
-    transform: scale(1.2);
-}
-
-.erase-all .fas {
-    color: red;
-    font-size: 1.5rem;
 }
 
 .pencil-colors {
@@ -171,12 +154,15 @@ textarea {
     box-shadow: 0 10px 6px -6px #777;
 }
 
-textarea::-webkit-scrollbar {
+textarea::-webkit-scrollbar 
+{
     width: 5px;
     background-color: #DADF84;
-}
-
-textarea::-webkit-scrollbar-thumb {
+ }
+  
+textarea::-webkit-scrollbar-thumb 
+{
     border-radius: 15px;
-    background-color: #2E3440;
+    background-color: #2E3440; 
 }
+ 
